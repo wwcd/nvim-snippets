@@ -1,0 +1,74 @@
+{
+  "go-restful method declaration": {
+    "prefix": "rfm",
+    "body": [
+      "func (${1:receiver} ${2:type}) ${3:method}(request *restful.Request, response *restful.Response) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Snippet for go-restful method declaration"
+  },
+  "go-restful func declaration": {
+    "prefix": "rff",
+    "body": [
+      "func $1(request *restful.Request, response *restful.Response) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Snippet for go-restfun function declaration"
+  },
+  "cobra main": {
+    "prefix": "ccm",
+    "body": [
+      "var rootCmd = cobra.Command{",
+      "\tUse:   \"$1\",",
+      "\tShort: \"$2\",",
+      "}",
+      "",
+      "func main() {",
+      "\trootCmd.PersistentFlags().BoolP(\"verbose\", \"v\", false, \"verbose output\")",
+      "\trootCmd.Execute()",
+      "}"
+    ],
+    "description": "Snippet for cobra main"
+  },
+  "cobra cmd": {
+    "prefix": "ccs",
+    "body": [
+      "func init() {",
+      "\tcmd := &cobra.Command{",
+      "\t\tUse:   \"$1\",",
+      "\t\tShort: \"$2\",",
+      "\t\tRun:   ${3:cmdFunc},",
+      "\t}",
+      "",
+      "\trootCmd.AddCommand(cmd)",
+      "}",
+      "",
+      "func ${3:cmdFunc}(cmd *cobra.Command, args []string) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Snippet for cobra cmd"
+  },
+  "cobra cmd flag string": {
+    "prefix": "ccfs",
+    "body": "cmd.Flags().StringP(\"${1:name}\", \"${2:shorthand}\", \"${3:value}\", \"${4:usage}\")",
+    "description": "Snippet for cobra cmd"
+  },
+  "std fmt errorf": {
+    "prefix": "sfe",
+    "body": "fmt.Errorf(\"$1 failed: %v\", err)",
+    "description": "Snippet for fmt Errorf"
+  },
+  "slog error": {
+    "prefix": "sle",
+    "body": "slog.Error(\"$1\")",
+    "description": "Snippet slog error"
+  },
+  "slog info": {
+    "prefix": "sli",
+    "body": "slog.Info(\"$1\")",
+    "description": "Snippet slog info"
+  }
+}
