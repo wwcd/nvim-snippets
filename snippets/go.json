@@ -84,7 +84,7 @@
     "description": "Snippet for cobra flag string"
   },
   "cobra cmd flag bool": {
-    "prefix": "ccfs",
+    "prefix": "ccfb",
     "body": "cmd.Flags().BoolP(\"${1:name}\", \"${2:shorthand}\", \"${3:value}\", \"${4:usage}\")",
     "description": "Snippet for cobra flag bool"
   },
