@@ -48,7 +48,7 @@
       "\t\tif vcsModified {",
       "\t\t\tvcsRevision += \"-dirty\"",
       "\t\t}",
-      "\t\treturn fmt.Sprintf(\"%s-%s compiled by %s at %s\", vcs, vcsRevision, bi.GoVersion, vcsTime)",
+      "\t\treturn fmt.Sprintf(\"%s-%s compiled via %s at %s\", vcs, vcsRevision, bi.GoVersion, vcsTime)",
       "\t}(),",
       "}",
       "",
@@ -90,7 +90,7 @@
   },
   "std fmt errorf": {
     "prefix": "sfe",
-    "body": "fmt.Errorf(\"$1 failed: %v\", err)",
+    "body": "fmt.Errorf(\"$1 failed: %w\", err)",
     "description": "Snippet for fmt Errorf"
   },
   "slog error": {
